@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Página inicial do curso WDD 231 de Mariana Argolo Santana.">
+  <meta name="author" content="Mariana Argolo Santana">
+
+  <title>Mariana Argolo Santana | WDD 231</title>
+
+  <link rel="icon" href="imagens/logo.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos/telas-pequenas.css">
+  <link rel="stylesheet" href="estilos/telas-grandes.css">
+
+  <script src="scripts/navegacao.js" defer></script>
+  <script src="scripts/data.js" defer></script>
+  <script src="scripts/curso.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a class="brand" href="index.html">
+        <img src="imagens/logo.svg" alt="Logo MS" width="48" height="48">
+        <span>Mariana Argolo Santana</span>
+      </a>
+
+      <button
+        id="menuButton"
+        class="menu-button"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="mainNav">
+        <span aria-hidden="true">☰</span>
+      </button>
+
+    </div>
+
+    <nav id="mainNav" class="main-nav" aria-label="Navegação principal">
+      <a href="index.html" aria-current="page">Página Inicial</a>
+      <a href="chamber/index.html">Projeto da Câmara</a>
+      <a href="final/index.html">Projeto Final</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <h1>Página Inicial</h1>
+
+    <div class="intro-grid">
+
+      <section class="panel about">
+
+        <h2>Sobre mim</h2>
+
+        <div class="panel-body">
+
+          <p>
+            Olá! Sou Mariana Argolo Santana, estudante de
+            Desenvolvimento de Software pela BYU-Idaho.
+          </p>
+
+          <p>
+            Gosto de aprender novas tecnologias, desenvolver
+            projetos e criar soluções digitais.
+          </p>
+
+          <p>
+            Este site reúne minhas atividades do curso WDD 231
+            e acompanha meu progresso no desenvolvimento web.
+          </p>
+
+        </div>
+
+      </section>
+
+      <section class="panel location">
+
+        <h2>Minha cidade</h2>
+
+        <div class="panel-body location-body">
+
+          <div class="city-art">
+
+            <img
+              src="imagens/santo-antonio-de-jesus.webp"
+              alt="Praça de Santo Antônio de Jesus, Bahia"
+              width="824"
+              height="460"
+              loading="lazy">
+
+          </div>
+
+          <p>
+            <strong>Santo Antônio de Jesus, Bahia</strong>
+          </p>
+
+          <p>
+            Uma cidade conhecida pelo comércio e pela
+            cultura do Recôncavo Baiano.
+          </p>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <section class="panel courses">
+
+      <h2>Certificado de Desenvolvimento Web e Programação</h2>
+
+      <div class="panel-body">
+
+        <div class="filters" role="group" aria-label="Filtrar disciplinas">
+
+          <button
+            type="button"
+            class="filter active"
+            data-filter="ALL"
+            aria-pressed="true">
+            Todos
+          </button>
+
+          <button
+            type="button"
+            class="filter"
+            data-filter="CSE"
+            aria-pressed="false">
+            CSE
+          </button>
+
+          <button
+            type="button"
+            class="filter"
+            data-filter="WDD"
+            aria-pressed="false">
+            WDD
+          </button>
+
+        </div>
+
+        <div
+          id="courseList"
+          class="course-grid"
+          aria-live="polite">
+        </div>
+
+        <p class="credit-total">
+          Total de créditos exibidos:
+          <strong id="totalCredits">0</strong>
+        </p>
+
+        <p class="legend">
+          Disciplinas concluídas aparecem destacadas.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <div class="social-links">
+
+      <a
+        href="https://github.com/"
+        target="_blank"
+        rel="noopener noreferrer">
+        GitHub
+      </a>
+
+      <a
+        href="https://www.linkedin.com/"
+        target="_blank"
+        rel="noopener noreferrer">
+        LinkedIn
+      </a>
+
+    </div>
+
+    <p>
+      © <span id="anoAtual"></span>
+      • Mariana Argolo Santana
+      • Bahia, Brasil
+    </p>
+
+    <p id="ultimaModificacao"></p>
+
+  </footer>
+
+</body>
+</html>
