@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -5,27 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Conheça as empresas associadas à Câmara de Comércio de Santo Antônio de Jesus, Bahia.">
   <meta name="author" content="Mariana Argolo Santana">
+
   <meta property="og:type" content="website">
   <meta property="og:title" content="Diretório | Câmara de Comércio de Santo Antônio de Jesus">
   <meta property="og:description" content="Encontre negócios e serviços associados à nossa câmara de comércio.">
-  <!-- Substitua SEU-USUARIO pelo seu nome de usuário no GitHub antes de publicar. -->
-  <meta property="og:url" content="https://SEU-USUARIO.github.io/wdd231/camara/diretorio.html">
-  <meta property="og:image" content="https://SEU-USUARIO.github.io/wdd231/camara/imagens/compartilhamento.svg">
+  <meta property="og:url" content="https://marianaargolozz.github.io/wdd231/camara/diretorio.html">
+  <meta property="og:image" content="https://marianaargolozz.github.io/wdd231/camara/imagens/compartilhamento.svg">
+
   <title>Diretório | Câmara de Comércio de Santo Antônio de Jesus</title>
+
   <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="estilos/normalizar.css">
   <link rel="stylesheet" href="estilos/telas-pequenas.css">
   <link rel="stylesheet" href="estilos/telas-grandes.css">
+
   <script src="scripts/diretorio.js" defer></script>
 </head>
+
 <body>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="diretorio.html" aria-label="Câmara de Comércio de Santo Antônio de Jesus, diretório">
         <img src="imagens/favicon.svg" alt="" width="52" height="52">
-        <span><strong>Câmara de Comércio</strong><small>Santo Antônio de Jesus • BA</small></span>
+        <span>
+          <strong>Câmara de Comércio</strong>
+          <small>Santo Antônio de Jesus • BA</small>
+        </span>
       </a>
-      <button id="menu-button" class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-navigation">☰</button>
+
+      <button
+        id="menu-button"
+        class="menu-button"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="main-navigation">☰</button>
+
       <nav id="main-navigation" class="navigation" aria-label="Navegação principal">
         <a href="index.html">Início</a>
         <a href="sobre.html">Sobre</a>
@@ -49,13 +65,26 @@
         <div>
           <p class="eyebrow eyebrow-dark">Nossa comunidade empresarial</p>
           <h2 id="members-title">Empresas associadas</h2>
-          <p class="section-subtitle">Conheça negócios locais. Listagem e níveis de associação são exemplos acadêmicos, sem indicar filiação real à câmara.</p>
+          <p class="section-subtitle">
+            Conheça negócios locais. Listagem e níveis de associação são exemplos acadêmicos, sem indicar filiação real à câmara.
+          </p>
         </div>
+
         <div class="view-controls" role="group" aria-label="Tipo de visualização">
-          <button id="grid-view" type="button" class="view-button selected" aria-pressed="true">▦ Grade</button>
-          <button id="list-view" type="button" class="view-button" aria-pressed="false">☷ Lista</button>
+          <button
+            id="grid-view"
+            type="button"
+            class="view-button selected"
+            aria-pressed="true">▦ Grade</button>
+
+          <button
+            id="list-view"
+            type="button"
+            class="view-button"
+            aria-pressed="false">☷ Lista</button>
         </div>
       </div>
+
       <div id="members" class="members grid-view" aria-live="polite">
         <p class="status">Carregando empresas...</p>
       </div>
@@ -69,9 +98,11 @@
         <p>Santo Antônio de Jesus, Bahia, Brasil</p>
         <p>Contato ilustrativo: contato@camara-exemplo.com</p>
       </div>
+
       <div class="footer-social" aria-label="Redes sociais">
         <p>Projeto acadêmico demonstrativo — não é a representação oficial de uma câmara de comércio.</p>
       </div>
+
       <div class="footer-bottom">
         <p>© <span id="current-year"></span> Câmara de Comércio • Mariana Argolo Santana • WDD 231</p>
         <p>Última modificação: <span id="last-modified"></span></p>
