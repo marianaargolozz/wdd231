@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça o comércio de Santo Antônio de Jesus, confira os eventos, o clima e as empresas em destaque.">
+  <meta name="author" content="Mariana Argolo Santana">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Câmara de Comércio de Santo Antônio de Jesus">
+  <meta property="og:description" content="Conheça o comércio de Santo Antônio de Jesus, confira os eventos, o clima e as empresas em destaque.">
+  <meta property="og:url" content="https://marianaargolozz.github.io/wdd231/camara/">
+  <meta property="og:image" content="https://marianaargolozz.github.io/wdd231/camara/imagens/centro-saj.webp">
+  <title>Câmara de Comércio de Santo Antônio de Jesus</title>
+  <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="estilos/normalizar.css">
+  <link rel="stylesheet" href="estilos/telas-pequenas.css">
+  <link rel="stylesheet" href="estilos/telas-grandes.css">
+  <link rel="stylesheet" href="estilos/inicio.css">
+  <script src="scripts/pagina.js" defer></script>
+  <script src="scripts/inicio.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Câmara de Comércio de Santo Antônio de Jesus, início">
+        <img src="imagens/favicon.svg" alt="" width="52" height="52">
+        <span><strong>Câmara de Comércio</strong><small>Santo Antônio de Jesus • BA</small></span>
+      </a>
+      <button id="menu-button" class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-navigation">☰</button>
+      <nav id="main-navigation" class="navigation" aria-label="Navegação principal">
+        <a class="active" aria-current="page" href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="diretorio.html">Diretório</a>
+        <a href="associar.html">Associe-se</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="inicio">
+    <section class="inicio-hero" aria-labelledby="page-title">
+      <img class="inicio-hero-foto" src="imagens/centro-saj.webp"
+        alt="Praça arborizada no centro de Santo Antônio de Jesus, com a igreja ao fundo"
+        width="824" height="460" fetchpriority="high">
+      <div class="inicio-hero-texto">
+        <p class="eyebrow">Santo Antônio de Jesus • Bahia</p>
+        <h1 id="page-title">Câmara de Comércio de Santo Antônio de Jesus</h1>
+        <p>Conheça quem movimenta o comércio local e faça parte da nossa rede.</p>
+        <a class="inicio-cta" href="associar.html">Associe-se à Câmara</a>
+      </div>
+    </section>
+
+    <div class="inicio-paineis">
+      <section class="inicio-painel" aria-labelledby="eventos-title">
+        <h2 id="eventos-title">Eventos recentes</h2>
+        <p class="inicio-nota">Programação ilustrativa do projeto acadêmico.</p>
+        <ul class="inicio-eventos">
+          <li><strong>Encontro de empreendedores</strong><br>Conversas e troca de experiências entre comerciantes locais.</li>
+          <li><strong>Feira de negócios do Recôncavo</strong><br>Uma mostra de produtos e serviços de pequenos negócios da região.</li>
+        </ul>
+      </section>
+
+      <section class="inicio-painel" aria-labelledby="tempo-title">
+        <h2 id="tempo-title">Tempo em Santo Antônio de Jesus</h2>
+        <div id="tempo-atual" aria-live="polite"><p>Carregando condições atuais…</p></div>
+        <h3>Previsão para os próximos 3 dias</h3>
+        <div id="previsao" aria-live="polite"><p>Carregando previsão…</p></div>
+      </section>
+    </div>
+
+    <section class="inicio-destaques" aria-labelledby="destaques-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow-dark">Comércio local</p>
+          <h2 id="destaques-title">Empresas em destaque</h2>
+          <p class="section-subtitle">Os níveis de associação são ilustrativos e não indicam filiação real.</p>
+        </div>
+        <a href="diretorio.html">Ver diretório de empresas</a>
+      </div>
+      <div id="destaques" class="members grid-view" aria-live="polite">
+        <p class="status">Carregando empresas…</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h2>Câmara de Comércio</h2>
+        <p>Santo Antônio de Jesus, Bahia, Brasil</p>
+        <p>Contato ilustrativo: contato@camara-exemplo.com</p>
+      </div>
+      <div class="footer-social" aria-label="Redes sociais">
+        <p>Projeto acadêmico demonstrativo — não é a representação oficial de uma câmara de comércio.</p>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="current-year"></span> Câmara de Comércio • Mariana Argolo Santana • WDD 231</p>
+        <p>Última modificação: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
