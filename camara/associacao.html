@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Câmara de Comércio de Santo Antônio de Jesus">
+    <title>Associação | Câmara de Comércio</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222
+        }
+
+        header,
+        footer {
+            background: #17324d;
+            color: white;
+            padding: 24px;
+            text-align: center
+        }
+
+        nav {
+            background: #244866;
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap
+        }
+
+        nav a {
+            color: white
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 24px
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 30px
+        }
+
+        form,
+        .card,
+        .result {
+            background: white;
+            padding: 24px;
+            border: 1px solid #ccc;
+            border-radius: 10px
+        }
+
+        label {
+            display: block;
+            margin-bottom: 18px;
+            font-weight: bold
+        }
+
+        input,
+        select,
+        textarea {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border: 1px solid #777;
+            border-radius: 5px;
+            font: inherit
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical
+        }
+
+        button {
+            background: #17324d;
+            color: white;
+            padding: 12px 20px;
+            border: 0;
+            border-radius: 5px;
+            cursor: pointer;
+            font: inherit
+        }
+
+        button[type=submit] {
+            width: 100%
+        }
+
+        .card {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: aparecer 1.5s ease both;
+            border-top: 6px solid var(--tier)
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(20px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        dialog {
+            border: 0;
+            border-radius: 12px;
+            padding: 30px;
+            width: 90%;
+            max-width: 450px
+        }
+
+        dialog::backdrop {
+            background: #0009
+        }
+
+        footer {
+            margin-top: 30px
+        }
+
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible {
+            outline: 3px solid #c07400;
+            outline-offset: 3px
+        }
+
+        dd {
+            margin: 6px 0 20px;
+            overflow-wrap: anywhere
+        }
+
+        dt {
+            font-weight: bold
+        }
+
+        @media(max-width:768px) {
+            .container {
+                grid-template-columns: 1fr
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .card {
+                animation: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Câmara de Comércio</h1>
+        <p>Santo Antônio de Jesus – Bahia</p>
+    </header>
+    <nav aria-label="Navegação principal"><a href="index.html">Início</a><a href="associacao.html">Associação</a></nav>
+    <main>
+        <h2>Faça parte da nossa câmara</h2>
+        <p>Preencha o formulário e escolha seu nível de associação.</p>
+        <div class="container">
+            <form method="get" action="agradecimento.html"><label>Nome *<input type="text" name="nome"
+                        title="Digite seu nome" autocomplete="given-name" required></label><label>Sobrenome *<input
+                        type="text" name="sobrenome" title="Digite seu sobrenome" autocomplete="family-name"
+                        required></label><label>Cargo na organização<input type="text" name="cargo"
+                        title="Use letras, espaços ou hífens, com pelo menos sete caracteres"
+                        autocomplete="organization-title" pattern="[\p{L} \-]{7,}"></label><label>E-mail *<input
+                        type="email" name="email" title="Digite seu e-mail" autocomplete="email"
+                        placeholder="exemplo@email.com" required></label><label>Celular *<input type="tel"
+                        name="celular" title="Digite seu celular" autocomplete="tel" required></label><label>Nome da
+                    empresa *<input type="text" name="empresa" title="Digite o nome da organização"
+                        autocomplete="organization" required></label><label>Nível de associação<select name="nivel"
+                        title="Escolha o nível">
+                        <option value="np">Associação NP</option>
+                        <option value="bronze">Associação Bronze</option>
+                        <option value="silver">Associação Prata</option>
+                        <option value="gold">Associação Ouro</option>
+                    </select></label><label>Descrição da organização<textarea name="descricao"
+                        title="Descreva sua organização"></textarea></label><input type="hidden" name="timestamp"
+                    id="timestamp"><button type="submit">Enviar solicitação</button></form>
+            <section>
+                <h2>Níveis de associação</h2>
+                <article class="card" style="--tier:#777">
+                    <h3>Associação NP</h3>
+                    <p>Gratuita</p><a href="#modal-np" data-modal="modal-np">Saiba mais<span> sobre NP</span></a>
+                </article>
+                <article class="card" style="--tier:#a96b38">
+                    <h3>Associação Bronze</h3>
+                    <p>R$ 50 por mês</p><a href="#modal-bronze" data-modal="modal-bronze">Saiba mais<span> sobre
+                            Bronze</span></a>
+                </article>
+                <article class="card" style="--tier:#888">
+                    <h3>Associação Prata</h3>
+                    <p>R$ 100 por mês</p><a href="#modal-silver" data-modal="modal-silver">Saiba mais<span> sobre
+                            Prata</span></a>
+                </article>
+                <article class="card" style="--tier:#b28a16">
+                    <h3>Associação Ouro</h3>
+                    <p>R$ 150 por mês</p><a href="#modal-gold" data-modal="modal-gold">Saiba mais<span> sobre
+                            Ouro</span></a>
+                </article>
+            </section>
+        </div>
+        <dialog id="modal-np" aria-labelledby="titulo-np">
+            <h2 id="titulo-np">Associação NP</h2>
+            <p>Gratuita</p>
+            <ul>
+                <li>Exclusiva para organizações sem fins lucrativos</li>
+                <li>Acesso à comunidade</li>
+                <li>Participação em eventos</li>
+            </ul><button type="button" class="fechar">Fechar</button>
+        </dialog>
+        <dialog id="modal-bronze" aria-labelledby="titulo-bronze">
+            <h2 id="titulo-bronze">Associação Bronze</h2>
+            <p>R$ 50 por mês</p>
+            <ul>
+                <li>Participação em eventos</li>
+                <li>Divulgação no diretório</li>
+                <li>Treinamentos básicos</li>
+            </ul><button type="button" class="fechar">Fechar</button>
+        </dialog>
+        <dialog id="modal-silver" aria-labelledby="titulo-silver">
+            <h2 id="titulo-silver">Associação Prata</h2>
+            <p>R$ 100 por mês</p>
+            <ul>
+                <li>Benefícios Bronze</li>
+                <li>Descontos em eventos</li>
+                <li>Treinamentos exclusivos</li>
+            </ul><button type="button" class="fechar">Fechar</button>
+        </dialog>
+        <dialog id="modal-gold" aria-labelledby="titulo-gold">
+            <h2 id="titulo-gold">Associação Ouro</h2>
+            <p>R$ 150 por mês</p>
+            <ul>
+                <li>Benefícios Prata</li>
+                <li>Publicidade na página inicial</li>
+                <li>Eventos exclusivos</li>
+                <li>Atendimento prioritário</li>
+            </ul><button type="button" class="fechar">Fechar</button>
+        </dialog>
+    </main>
+    <footer>
+        <p>Câmara de Comércio de Santo Antônio de Jesus</p>
+        <p>Projeto WDD231</p>
+    </footer>
+    <script>document.getElementById('timestamp').value = new Date().toISOString(); document.querySelectorAll('[data-modal]').forEach(link => link.addEventListener('click', event => { event.preventDefault(); document.getElementById(link.dataset.modal).showModal() })); document.querySelectorAll('.fechar').forEach(button => button.addEventListener('click', () => button.closest('dialog').close()));</script>
+</body>
+
+</html>
